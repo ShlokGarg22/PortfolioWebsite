@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Github, ExternalLink, Code2, Brain, Cloud, Database } from 'lucide-react';
+import { Github, ExternalLink, Code2, Brain, Cloud } from 'lucide-react';
 import { cn } from '../../lib/utils';
 
 type Category = 'All' | 'Full Stack' | 'AI/ML' | 'Cloud';
