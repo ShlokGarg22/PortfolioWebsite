@@ -5,12 +5,11 @@ import GradientBackground from './components/ui/GradientBackground';
 import LightRays from './components/ui/LightRays';
 import ClickSpark from './components/ui/ClickSpark';
 import PillNav from './components/ui/PillNav';
-import Dock from './components/ui/Dock';
 import RotatingText from './components/ui/RotatingText';
 import LogoLoop from './components/ui/LogoLoop';
 import MagicBento from './components/ui/MagicBento';
 import MagicBentoDark from './components/ui/MaginBentoDark';
-import ScrollStack from './components/ui/ScrollStack';
+import FilterableProjectGrid from './components/ui/FilterableProjectGrid';
 import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss } from 'react-icons/si';
 
 const techLogos = [
@@ -150,20 +149,20 @@ function App() {
             <h2 className="text-4xl font-semibold tracking-tight md:text-5xl">Selected Works.</h2>
             <p className="mt-4 text-gray-500">A curation of my best engineering efforts.</p>
           </div>
-          <ScrollStack />
+          <FilterableProjectGrid />
         </section>
 
         {/* Footer */}
         <footer id="contact" className="flex w-full flex-col items-center justify-center bg-transparent py-24 text-center scroll-mt-32">
           <h2 className="text-6xl font-bold tracking-tighter md:text-9xl">Let's Talk.</h2>
-          <div className="mt-8 flex gap-6">
-            <a href="mailto:shlok@example.com" className="rounded-full bg-black px-8 py-4 text-white transition-transform hover:scale-105 dark:bg-white dark:text-black">
+          <div className="mt-8 flex flex-col md:flex-row gap-4 md:gap-6 w-full md:w-auto px-6 md:px-0">
+            <a href="mailto:shlok@example.com" className="w-full md:w-auto rounded-full bg-black px-8 py-4 text-white transition-transform hover:scale-105 dark:bg-white dark:text-black">
               Email Me
             </a>
-            <a href="https://github.com/ShlokGarg22" target="_blank" rel="noreferrer" className="rounded-full border border-gray-200 bg-white px-8 py-4 text-black transition-colors hover:bg-gray-50 dark:bg-black dark:text-white dark:border-gray-800 dark:hover:bg-gray-900">
+            <a href="https://github.com/ShlokGarg22" target="_blank" rel="noreferrer" className="w-full md:w-auto rounded-full border border-gray-200 bg-white px-8 py-4 text-black transition-colors hover:bg-gray-50 dark:bg-black dark:text-white dark:border-gray-800 dark:hover:bg-gray-900">
               GitHub
             </a>
-            <a href="https://www.linkedin.com/in/shlok-garg-524991320" target="_blank" rel="noreferrer" className="rounded-full border border-gray-200 bg-white px-8 py-4 text-black transition-colors hover:bg-gray-50 dark:bg-black dark:text-white dark:border-gray-800 dark:hover:bg-gray-900">
+            <a href="https://www.linkedin.com/in/shlok-garg-524991320" target="_blank" rel="noreferrer" className="w-full md:w-auto rounded-full border border-gray-200 bg-white px-8 py-4 text-black transition-colors hover:bg-gray-50 dark:bg-black dark:text-white dark:border-gray-800 dark:hover:bg-gray-900">
               LinkedIn
             </a>
           </div>
@@ -172,8 +171,6 @@ function App() {
           </p>
         </footer>
       </main>
-
-      <Dock />
     </div>
   );
 }
