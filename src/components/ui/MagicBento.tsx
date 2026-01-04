@@ -29,20 +29,20 @@ const MagicBento = () => {
   return (
     <div className="grid grid-cols-1 gap-4 md:grid-cols-3 md:grid-rows-2 h-full min-h-[600px] w-full max-w-6xl mx-auto p-4">
       <BentoCard title="Full Stack" icon={Code2} className="md:col-span-2 md:row-span-1 bg-blue-50 hover:bg-blue-100">
-        Expertise in React, Next.js, Node.js, and modern web frameworks. Building scalable, high-performance applications.
+        React, Next.js, Node.js, TypeScript, Tailwind CSS. Building scalable, high-performance applications.
       </BentoCard>
       <BentoCard title="AI Architect" icon={Brain} className="md:col-span-1 md:row-span-2 bg-purple-900 text-white hover:bg-purple-800">
         <span className="text-purple-100">
-          Designing intelligent systems with Python, TensorFlow, and LLMs. Bridging the gap between traditional software and AI.
+          Python, TensorFlow, PyTorch, OpenAI API, LangChain. Bridging the gap between traditional software and AI.
         </span>
       </BentoCard>
       <BentoCard title="Cloud Native" icon={Cloud} className="md:col-span-1 md:row-span-1 bg-sky-900 text-white hover:bg-sky-800">
         <span className="text-sky-100">
-          AWS, Docker, Kubernetes.
+          AWS, Docker, Kubernetes, Terraform, CI/CD.
         </span>
       </BentoCard>
       <BentoCard title="System Design" icon={Database} className="md:col-span-1 md:row-span-1 bg-orange-50 hover:bg-orange-100">
-        Microservices, Event-driven architecture.
+        Microservices, Event-driven, Redis, PostgreSQL, MongoDB.
       </BentoCard>
     </div>
   );

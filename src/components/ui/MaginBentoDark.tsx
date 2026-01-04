@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState, useCallback } from 'react';
 import { gsap } from 'gsap';
+import { Code2, Database, Brain, Cloud } from 'lucide-react';
 
 export interface BentoCardProps {
   color?: string;
@@ -8,6 +9,7 @@ export interface BentoCardProps {
   label?: string;
   textAutoHide?: boolean;
   disableAnimations?: boolean;
+  icon?: any;
 }
 
 export interface BentoProps {
@@ -33,26 +35,26 @@ const cardData: BentoCardProps[] = [
   {
     color: '#060010',
     title: 'Full Stack',
-    description: 'Expertise in React, Next.js, Node.js, and modern web frameworks. Building scalable, high-performance applications.',
-    label: 'Web'
+    description: 'React, Next.js, Node.js, TypeScript, Tailwind CSS. Building scalable, high-performance applications.',
+    icon: Code2
   },
   {
     color: '#060010',
     title: 'AI Architect',
-    description: 'Designing intelligent systems with Python, TensorFlow, and LLMs. Bridging the gap between traditional software and AI.',
-    label: 'AI'
+    description: 'Python, TensorFlow, PyTorch, OpenAI API, LangChain. Bridging the gap between traditional software and AI.',
+    icon: Brain
   },
   {
     color: '#060010',
     title: 'Cloud Native',
-    description: 'AWS, Docker, Kubernetes.',
-    label: 'Infra'
+    description: 'AWS, Docker, Kubernetes, Terraform, CI/CD.',
+    icon: Cloud
   },
   {
     color: '#060010',
     title: 'System Design',
-    description: 'Microservices, Event-driven architecture.',
-    label: 'Architecture'
+    description: 'Microservices, Event-driven, Redis, PostgreSQL, MongoDB.',
+    icon: Database
   }
 ];
 
@@ -653,10 +655,16 @@ const MagicBentoDark: React.FC<BentoProps> = ({
                   clickEffect={clickEffect}
                   enableMagnetism={enableMagnetism}
                 >
-                  <div className="card__header flex justify-between gap-3 relative text-white">
-                    <span className="card__label text-base">{card.label}</span>
+                  <div className="absolute right-4 top-4 opacity-20 pointer-events-none z-0">
+                    {card.icon && <card.icon size={80} className="text-white" />}
                   </div>
-                  <div className="card__content flex flex-col relative text-white">
+                  <div className="card__header flex justify-between items-start gap-3 relative text-white z-10">
+                    <div className="rounded-full bg-white/10 p-2 w-fit backdrop-blur-sm border border-white/10">
+                      {card.icon && <card.icon size={20} className="text-white" />}
+                    </div>
+                    <span className="card__label text-xs font-medium opacity-80 tracking-wider uppercase">{card.label}</span>
+                  </div>
+                  <div className="card__content flex flex-col relative text-white z-10">
                     <h3 className={`card__title font-normal text-base m-0 mb-1 ${textAutoHide ? 'text-clamp-1' : ''}`}>
                       {card.title}
                     </h3>
@@ -785,10 +793,16 @@ const MagicBentoDark: React.FC<BentoProps> = ({
                   el.addEventListener('click', handleClick);
                 }}
               >
-                <div className="card__header flex justify-between gap-3 relative text-white">
-                  <span className="card__label text-base">{card.label}</span>
+                <div className="absolute right-4 top-4 opacity-20 pointer-events-none z-0">
+                  {card.icon && <card.icon size={80} className="text-white" />}
                 </div>
-                <div className="card__content flex flex-col relative text-white">
+                <div className="card__header flex justify-between items-start gap-3 relative text-white z-10">
+                  <div className="rounded-full bg-white/10 p-2 w-fit backdrop-blur-sm border border-white/10">
+                    {card.icon && <card.icon size={20} className="text-white" />}
+                  </div>
+                  <span className="card__label text-xs font-medium opacity-80 tracking-wider uppercase">{card.label}</span>
+                </div>
+                <div className="card__content flex flex-col relative text-white z-10">
                   <h3 className={`card__title font-normal text-base m-0 mb-1 ${textAutoHide ? 'text-clamp-1' : ''}`}>
                     {card.title}
                   </h3>

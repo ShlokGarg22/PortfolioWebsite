@@ -11,14 +11,13 @@ import LogoLoop from './components/ui/LogoLoop';
 import MagicBento from './components/ui/MagicBento';
 import MagicBentoDark from './components/ui/MaginBentoDark';
 import ScrollStack from './components/ui/ScrollStack';
-import reactLogo from './assets/react.svg';
+import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss } from 'react-icons/si';
 
-const logos = [
-  { src: reactLogo, alt: 'React' },
-  { src: reactLogo, alt: 'React' },
-  { src: reactLogo, alt: 'React' },
-  { src: reactLogo, alt: 'React' },
-  { src: reactLogo, alt: 'React' },
+const techLogos = [
+  { node: <SiReact />, title: "React", href: "https://react.dev" },
+  { node: <SiNextdotjs />, title: "Next.js", href: "https://nextjs.org" },
+  { node: <SiTypescript />, title: "TypeScript", href: "https://www.typescriptlang.org" },
+  { node: <SiTailwindcss />, title: "Tailwind CSS", href: "https://tailwindcss.com" },
 ];
 
 function App() {
@@ -77,7 +76,7 @@ function App() {
       
       <main className="relative z-10 flex flex-col items-center w-full">
         {/* Hero Section */}
-        <section id="home" className="flex min-h-screen w-full flex-col items-center justify-center px-4 pt-32 md:flex-row md:justify-between md:px-20 gap-10">
+        <section id="home" className="flex min-h-screen w-full flex-col items-center justify-center px-4 pt-28 md:flex-row md:justify-between md:px-20 gap-10">
           <div className="flex flex-col items-start gap-8 md:w-1/2 z-20">
             <h1 className="text-6xl font-bold tracking-tighter md:text-8xl leading-[0.9]">
               Hello, I'm <br /> Shlok.
@@ -86,13 +85,20 @@ function App() {
             <p className="max-w-md text-lg text-gray-500 md:text-xl leading-relaxed">
               Building digital experiences that blend aesthetic perfection with architectural robustness.
             </p>
+            <a 
+              href="/ShlokGarg_Resume.pdf" 
+              download="ShlokGarg_Resume.pdf"
+              className="inline-flex items-center justify-center rounded-full bg-black px-8 py-3 text-white transition-transform hover:scale-105 dark:bg-white dark:text-black font-medium"
+            >
+              Download Resume
+            </a>
           </div>
           
-          <div className="flex h-[50vh] w-full items-center justify-center md:h-screen md:w-1/2 z-10">
-            <div className="relative aspect-square w-[280px] md:w-[450px] flex items-center justify-center">
+          <div className="flex h-[50vh] w-full items-center justify-center md:h-auto md:w-1/2 z-10">
+            <div className="relative aspect-square w-[280px] md:w-[450px] flex items-center justify-center md:translate-x-8">
               <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-100 to-purple-100 blur-3xl opacity-60 animate-pulse" />
               <img 
-                src="/avatar.png" 
+                src="/avatar2.png" 
                 alt="Shlok Garg" 
                 className="relative h-full w-full object-contain drop-shadow-2xl transition-transform hover:scale-105 duration-700" 
               />
@@ -100,10 +106,22 @@ function App() {
           </div>
         </section>
 
-        <LogoLoop logos={logos} />
-
         {/* About Section */}
-        <section id="about" className="w-full py-24">
+        <section id="about" className="w-full py-24 scroll-mt-32">
+          <div className="w-full pb-12">
+            <LogoLoop
+              logos={techLogos}
+              speed={120}
+              direction="left"
+              logoHeight={48}
+              gap={40}
+              hoverSpeed={0}
+              scaleOnHover
+              fadeOut
+              ariaLabel="Technology partners"
+            />
+          </div>
+
           <div className="mb-12 text-center">
             <h2 className="text-4xl font-semibold tracking-tight md:text-5xl">The Stack.</h2>
             <p className="mt-4 text-gray-500">Tools and technologies I use to build the future.</p>
@@ -127,7 +145,7 @@ function App() {
         </section>
 
         {/* Projects Section */}
-        <section id="projects" className="w-full bg-transparent py-24">
+        <section id="projects" className="w-full bg-transparent py-24 scroll-mt-32">
            <div className="mb-12 text-center">
             <h2 className="text-4xl font-semibold tracking-tight md:text-5xl">Selected Works.</h2>
             <p className="mt-4 text-gray-500">A curation of my best engineering efforts.</p>
@@ -136,7 +154,7 @@ function App() {
         </section>
 
         {/* Footer */}
-        <footer id="contact" className="flex w-full flex-col items-center justify-center bg-transparent py-24 text-center">
+        <footer id="contact" className="flex w-full flex-col items-center justify-center bg-transparent py-24 text-center scroll-mt-32">
           <h2 className="text-6xl font-bold tracking-tighter md:text-9xl">Let's Talk.</h2>
           <div className="mt-8 flex gap-6">
             <a href="mailto:shlok@example.com" className="rounded-full bg-black px-8 py-4 text-white transition-transform hover:scale-105 dark:bg-white dark:text-black">
