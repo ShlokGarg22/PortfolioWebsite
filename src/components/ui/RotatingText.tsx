@@ -14,8 +14,8 @@ const RotatingText = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-start justify-center overflow-y-hidden overflow-x-visible text-4xl font-bold tracking-tight sm:text-6xl md:text-7xl">
-      <div className="relative h-[1.2em] w-[200vw] md:w-[1000px] overflow-y-hidden overflow-x-visible">
+    <div className="flex flex-col items-start justify-center overflow-visible text-[6.5vw] sm:text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight">
+      <div className="relative h-[1.3em] w-[90vw] md:w-[1000px] overflow-y-hidden overflow-x-visible">
         <AnimatePresence mode="wait">
           <motion.span
             key={index}
