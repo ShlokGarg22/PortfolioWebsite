@@ -75,13 +75,15 @@ function App() {
       
       <main className="relative z-10 flex flex-col items-center w-full">
         {/* Hero Section */}
-        <section id="home" className="flex min-h-screen w-full flex-col items-center justify-center px-4 pt-28 md:flex-row md:justify-between md:px-20 gap-10">
-          <div className="flex flex-col items-start gap-8 md:w-1/2 z-20">
-            <h1 className="text-6xl font-bold tracking-tighter md:text-8xl leading-[0.9]">
-              Hello, I'm <br /> Shlok.
-            </h1>
-            <RotatingText />
-            <p className="max-w-md text-lg text-gray-500 md:text-xl leading-relaxed">
+        <section id="home" className="flex min-h-[90vh] w-full flex-col items-center justify-center px-4 pt-28 md:flex-row md:justify-between md:px-20 gap-10">
+          <div className="flex flex-col items-start md:w-1/2 z-20">
+            <div className="flex flex-col gap-2 mb-6">
+              <h1 className="text-6xl font-bold tracking-tighter md:text-8xl leading-[0.9]">
+                Hello, I'm <br /> Shlok.
+              </h1>
+              <RotatingText />
+            </div>
+            <p className="max-w-md text-lg text-gray-600 dark:text-gray-400 md:text-xl leading-relaxed mb-8">
               Building digital experiences that blend aesthetic perfection with architectural robustness.
             </p>
             <a 
@@ -127,7 +129,6 @@ function App() {
           </div>
           {isDarkMode ? (
             <MagicBentoDark 
-              textAutoHide={true}
               enableStars={true}
               enableSpotlight={true}
               enableBorderGlow={true}

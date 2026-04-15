@@ -35,25 +35,25 @@ const cardData: BentoCardProps[] = [
   {
     color: '#060010',
     title: 'Full Stack',
-    description: 'React, Next.js, Node.js, TypeScript, Tailwind CSS. Building scalable, high-performance applications.',
+    description: 'React, Node.js, TypeScript, Tailwind CSS. Building scalable, high-performance applications.',
     icon: Code2
   },
   {
     color: '#060010',
     title: 'AI Architect',
-    description: 'Python, TensorFlow, PyTorch, OpenAI API, LangChain. Bridging the gap between traditional software and AI.',
+    description: 'Python, LangChain, LangGraph, CrewAI, TensorFlow, PyTorch, OpenAI API. Bridging the gap between traditional software and AI.',
     icon: Brain
   },
   {
     color: '#060010',
     title: 'Cloud Native',
-    description: 'AWS, Docker, Kubernetes, Terraform, CI/CD.',
+    description: 'Vercel , AWS, Azure.',
     icon: Cloud
   },
   {
     color: '#060010',
-    title: 'System Design',
-    description: 'Microservices, Event-driven, Redis, PostgreSQL, MongoDB.',
+    title: 'Database',
+    description: 'MongoDB, SQL, SQLite, Neon, Supabase.',
     icon: Database
   }
 ];
@@ -495,7 +495,6 @@ const useMobileDetection = () => {
 };
 
 const MagicBentoDark: React.FC<BentoProps> = ({
-  textAutoHide = true,
   enableStars = true,
   enableSpotlight = true,
   enableBorderGlow = true,
@@ -662,17 +661,26 @@ const MagicBentoDark: React.FC<BentoProps> = ({
                     <div className="rounded-full bg-white/10 p-2 w-fit backdrop-blur-sm border border-white/10">
                       {card.icon && <card.icon size={20} className="text-white" />}
                     </div>
-                    <span className="card__label text-xs font-medium opacity-80 tracking-wider uppercase">{card.label}</span>
+
                   </div>
-                  <div className="card__content flex flex-col relative text-white z-10">
-                    <h3 className={`card__title font-normal text-base m-0 mb-1 ${textAutoHide ? 'text-clamp-1' : ''}`}>
+                  <div className="card__content flex flex-col relative text-white z-10 transition-all duration-300">
+                    <h3 className={`card__title font-bold text-2xl m-0 mb-3 tracking-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400`}>
                       {card.title}
                     </h3>
                     <p
-                      className={`card__description text-xs leading-5 opacity-90 ${textAutoHide ? 'text-clamp-2' : ''}`}
+                      className={`card__description text-sm leading-relaxed opacity-80 mb-4`}
                     >
                       {card.description}
                     </p>
+                    {card.label && (
+                      <div className="flex flex-wrap gap-2 mt-auto pt-2">
+                        {card.label.split(', ').map(tag => (
+                          <span key={tag} className="px-3 py-1 text-xs font-semibold rounded-full bg-white/10 text-white border border-white/5 backdrop-blur-sm group-hover:border-white/20 transition-colors">
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </ParticleCard>
               );
@@ -800,16 +808,24 @@ const MagicBentoDark: React.FC<BentoProps> = ({
                   <div className="rounded-full bg-white/10 p-2 w-fit backdrop-blur-sm border border-white/10">
                     {card.icon && <card.icon size={20} className="text-white" />}
                   </div>
-                  <span className="card__label text-xs font-medium opacity-80 tracking-wider uppercase">{card.label}</span>
-                </div>
-                <div className="card__content flex flex-col relative text-white z-10">
-                  <h3 className={`card__title font-normal text-base m-0 mb-1 ${textAutoHide ? 'text-clamp-1' : ''}`}>
-                    {card.title}
-                  </h3>
-                  <p className={`card__description text-xs leading-5 opacity-90 ${textAutoHide ? 'text-clamp-2' : ''}`}>
-                    {card.description}
-                  </p>
-                </div>
+                  </div>
+                  <div className="card__content flex flex-col relative text-white z-10 transition-all duration-300">
+                    <h3 className={`card__title font-bold text-2xl m-0 mb-3 tracking-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400`}>
+                      {card.title}
+                    </h3>
+                    <p className={`card__description text-sm leading-relaxed opacity-80 mb-4`}>
+                      {card.description}
+                    </p>
+                    {card.label && (
+                      <div className="flex flex-wrap gap-2 mt-auto pt-2">
+                        {card.label.split(', ').map(tag => (
+                          <span key={tag} className="px-3 py-1 text-xs font-semibold rounded-full bg-white/10 text-white border border-white/5 backdrop-blur-sm group-hover:border-white/20 transition-colors">
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                  </div>
               </div>
             );
           })}

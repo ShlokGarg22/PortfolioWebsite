@@ -19,67 +19,53 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: "BrandGuardian",
-    description: "An AI-powered Compliance QA Pipeline and Brand Guidelines platform.",
-    category: "AI/ML",
-    tech: ["Python", "JavaScript", "React", "LLMs"],
-    github: "https://github.com/ShlokGarg22/Brand-Guidelines"
+    title: "E-Commerce Platform",
+    description: "A modern e-commerce solution with real-time inventory management and AI-driven product recommendations.",
+    category: "Full Stack",
+    tech: ["Next.js", "TypeScript", "Stripe", "Redis"],
+    github: "https://github.com",
+    demo: "https://demo.com"
   },
   {
     id: 2,
-    title: "DataMind (MergeAI)",
-    description: "Natural language SQL query tool with AI-powered data analysis and visualization.",
+    title: "Neural Style Transfer",
+    description: "Deep learning model that applies the artistic style of one image to the content of another using VGG19.",
     category: "AI/ML",
-    tech: ["FastAPI", "React", "LangGraph", "PostgreSQL"],
-    github: "https://github.com/ShlokGarg22/MergeAI"
+    tech: ["Python", "PyTorch", "OpenCV", "Flask"],
+    github: "https://github.com"
   },
   {
     id: 3,
-    title: "GameForge AI",
-    description: "A multi-agent platform using LangGraph to generate playable browser games from text prompts.",
-    category: "AI/ML",
-    tech: ["LangGraph", "Python", "CrewAI", "LLMs"],
-    github: "https://github.com/ShlokGarg22/GameForge-AI"
+    title: "Cloud Infrastructure IAC",
+    description: "Complete AWS infrastructure setup using Terraform modules for a microservices architecture.",
+    category: "Cloud",
+    tech: ["Terraform", "AWS", "Docker", "Kubernetes"],
+    github: "https://github.com"
   },
   {
     id: 4,
-    title: "Echo",
-    description: "Enterprise-level monorepo for reactive chat & knowledge management using Convex and Pinecone.",
+    title: "Real-time Chat App",
+    description: "Scalable chat application supporting thousands of concurrent users with WebSocket connections.",
     category: "Full Stack",
-    tech: ["Next.js", "TypeScript", "Convex", "Pinecone"],
-    github: "https://github.com/ShlokGarg22/Echo"
+    tech: ["React", "Node.js", "Socket.io", "MongoDB"],
+    github: "https://github.com",
+    demo: "https://demo.com"
   },
   {
     id: 5,
-    title: "NetWizard",
-    description: "A cross-platform network diagnostic CLI tool with a custom theme system.",
-    category: "Cloud",
-    tech: ["Python", "Networking", "CLI", "System Architecture"],
-    github: "https://github.com/ShlokGarg22/NetWizard"
+    title: "LLM RAG Chatbot",
+    description: "Context-aware chatbot using Retrieval-Augmented Generation to answer questions from custom documents.",
+    category: "AI/ML",
+    tech: ["LangChain", "OpenAI", "Pinecone", "FastAPI"],
+    github: "https://github.com"
   },
   {
     id: 6,
-    title: "MoviePop AI",
-    description: "Movie recommender utilizing Gemini Embeddings and Supabase for semantic search.",
-    category: "AI/ML",
-    tech: ["Gemini Embeddings", "Supabase", "Vector DB", "React"],
-    github: "https://github.com/ShlokGarg22/MoviePop-AI"
-  },
-  {
-    id: 7,
-    title: "Second Brain Frontend",
-    description: "A modern frontend application for a personal knowledge base and knowledge management.",
-    category: "Full Stack",
-    tech: ["TypeScript", "React", "State Management", "Vite"],
-    github: "https://github.com/ShlokGarg22/second_brain_frontend"
-  },
-  {
-    id: 8,
-    title: "Flexi DBMS Project",
-    description: "A comprehensive Database Management System project built to demonstrate core database principles.",
-    category: "Full Stack",
-    tech: ["Java", "SQL", "Database Design", "JDBC"],
-    github: "https://github.com/ShlokGarg22/Flexi_DBMS_Project"
+    title: "Serverless API Gateway",
+    description: "High-performance API gateway built with AWS Lambda and API Gateway with custom authorizers.",
+    category: "Cloud",
+    tech: ["AWS Lambda", "API Gateway", "DynamoDB", "Node.js"],
+    github: "https://github.com"
   }
 ];
 

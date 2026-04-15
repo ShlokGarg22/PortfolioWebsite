@@ -14,8 +14,8 @@ const RotatingText = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-start justify-center overflow-hidden text-5xl font-bold tracking-tight sm:text-7xl md:text-8xl">
-      <div className="relative h-[1.2em] w-full overflow-hidden">
+    <div className="flex flex-col items-start justify-center overflow-y-hidden overflow-x-visible text-4xl font-bold tracking-tight sm:text-6xl md:text-7xl">
+      <div className="relative h-[1.2em] w-[200vw] md:w-[1000px] overflow-y-hidden overflow-x-visible">
         <AnimatePresence mode="wait">
           <motion.span
             key={index}
@@ -23,7 +23,7 @@ const RotatingText = () => {
             animate={{ y: 0 }}
             exit={{ y: "-100%" }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="absolute left-0 top-0 block bg-gradient-to-r from-black to-gray-600 bg-clip-text text-transparent"
+            className="absolute left-0 top-0 block whitespace-nowrap bg-gradient-to-r from-gray-800 to-gray-400 dark:from-gray-200 dark:to-gray-500 bg-clip-text text-transparent"
           >
             {words[index]}
           </motion.span>
