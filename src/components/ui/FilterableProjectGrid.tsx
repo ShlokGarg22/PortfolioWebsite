@@ -19,53 +19,67 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    description: "A modern e-commerce solution with real-time inventory management and AI-driven product recommendations.",
-    category: "Full Stack",
-    tech: ["Next.js", "TypeScript", "Stripe", "Redis"],
-    github: "https://github.com",
-    demo: "https://demo.com"
+    title: "Brand-Guidelines",
+    description: "An AI-powered Compliance QA Pipeline and Brand Guidelines platform.",
+    category: "AI/ML",
+    tech: ["Python", "JavaScript", "React", "LLMs"],
+    github: "https://github.com/ShlokGarg22/Brand-Guidelines"
   },
   {
     id: 2,
-    title: "Neural Style Transfer",
-    description: "Deep learning model that applies the artistic style of one image to the content of another using VGG19.",
+    title: "MergeAI",
+    description: "Natural language SQL query tool with AI-powered data analysis and visualization.",
     category: "AI/ML",
-    tech: ["Python", "PyTorch", "OpenCV", "Flask"],
-    github: "https://github.com"
+    tech: ["FastAPI", "React", "LangGraph", "PostgreSQL"],
+    github: "https://github.com/ShlokGarg22/MergeAI"
   },
   {
     id: 3,
-    title: "Cloud Infrastructure IAC",
-    description: "Complete AWS infrastructure setup using Terraform modules for a microservices architecture.",
-    category: "Cloud",
-    tech: ["Terraform", "AWS", "Docker", "Kubernetes"],
-    github: "https://github.com"
+    title: "Multimodal-RAG",
+    description: "Multimodal Retrieval-Augmented Generation implementation built with Python and Jupyter Notebooks.",
+    category: "AI/ML",
+    tech: ["Python", "Jupyter", "LLMs", "Vector DBs"],
+    github: "https://github.com/ShlokGarg22/Multimodal-RAG"
   },
   {
     id: 4,
-    title: "Real-time Chat App",
-    description: "Scalable chat application supporting thousands of concurrent users with WebSocket connections.",
-    category: "Full Stack",
-    tech: ["React", "Node.js", "Socket.io", "MongoDB"],
-    github: "https://github.com",
-    demo: "https://demo.com"
+    title: "Vercel Clone",
+    description: "A Vercel Clone where users can provide their GitHub Repo URL to automatically deploy it on the internet.",
+    category: "Cloud",
+    tech: ["TypeScript", "Node.js", "Docker", "DevOps"],
+    github: "https://github.com/ShlokGarg22/vercel_clone"
   },
   {
     id: 5,
-    title: "LLM RAG Chatbot",
-    description: "Context-aware chatbot using Retrieval-Augmented Generation to answer questions from custom documents.",
-    category: "AI/ML",
-    tech: ["LangChain", "OpenAI", "Pinecone", "FastAPI"],
-    github: "https://github.com"
+    title: "MoviePop",
+    description: "Movie recommendation and tracking web application.",
+    category: "Full Stack",
+    tech: ["JavaScript", "Web Development", "APIs"],
+    github: "https://github.com/ShlokGarg22/MoviePop"
   },
   {
     id: 6,
-    title: "Serverless API Gateway",
-    description: "High-performance API gateway built with AWS Lambda and API Gateway with custom authorizers.",
-    category: "Cloud",
-    tech: ["AWS Lambda", "API Gateway", "DynamoDB", "Node.js"],
-    github: "https://github.com"
+    title: "Second Brain Frontend",
+    description: "A modern frontend prototype application for a personal knowledge base system.",
+    category: "Full Stack",
+    tech: ["TypeScript", "React", "State Management", "Vite"],
+    github: "https://github.com/ShlokGarg22/second_brain_frontend"
+  },
+  {
+    id: 7,
+    title: "Flexi DBMS Project",
+    description: "A comprehensive Database Management System project demonstrating core database principles.",
+    category: "Full Stack",
+    tech: ["Java", "SQL", "Database Design", "JDBC"],
+    github: "https://github.com/ShlokGarg22/Flexi_DBMS_Project"
+  },
+  {
+    id: 8,
+    title: "Wave Game",
+    description: "A Python-based interactive game.",
+    category: "Full Stack",
+    tech: ["Python", "Game Development", "Logic"],
+    github: "https://github.com/ShlokGarg22/wave_game"
   }
 ];
 
